@@ -47,7 +47,7 @@ for STEP in paths:
     STEP2=STEP.replace(path,'')
     df = pd.read_csv(STEP, skiprows=[1], header=0, names=['x','y'])
     da = pd.DataFrame(df)
-    med=da['y'].median() # MEDIAN
+    med=da['y'].median() # MEDIAN %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Everything here is super specific! Can be ignored
     thresh = 10*med
     distance = 10
     d1 = da[:][da['y']> thresh] #creates matrix with only the peaks and x with correct threshold
